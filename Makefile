@@ -13,6 +13,7 @@ upload:
 .PHONY: docker
 docker:
 	docker build . -t chaspy/lambda-api-gateway:latest
+	docker tag chaspy/lambda-api-gateway 655123516369.dkr.ecr.region.amazonaws.com/lambda-api-gateway:latest
 
 .PHONY: login
 login:
