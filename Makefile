@@ -11,5 +11,9 @@ upload:
 	aws lambda update-function-code --function-name hello-api-gateway --zip-file fileb://hello.zip
 
 .PHONY: docker
-dockerbuild:
+docker:
 	docker build . -t chaspy/lambda-api-gateway:latest
+
+.PHONY: login
+login:
+	aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin https://655123516369.dkr.ecr.ap-northeast-1.amazonaws.com
