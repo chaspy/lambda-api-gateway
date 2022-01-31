@@ -18,3 +18,7 @@ docker:
 .PHONY: login
 login:
 	aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin https://655123516369.dkr.ecr.${AWS_REGION}.amazonaws.com
+
+.PHONY: push
+push:
+	docker push 655123516369.dkr.ecr.${AWS_REGION}}.amazonaws.com/lambda-api-gateway:latest
