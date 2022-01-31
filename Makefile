@@ -13,8 +13,8 @@ upload:
 .PHONY: docker
 docker:
 	docker build . -t chaspy/lambda-api-gateway:latest
-	docker tag chaspy/lambda-api-gateway 655123516369.dkr.ecr.region.amazonaws.com/lambda-api-gateway:latest
+	docker tag chaspy/lambda-api-gateway:latest 655123516369.dkr.ecr.${AWS_REGION}.amazonaws.com/lambda-api-gateway:latest
 
 .PHONY: login
 login:
-	aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin https://655123516369.dkr.ecr.ap-northeast-1.amazonaws.com
+	aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin https://655123516369.dkr.ecr.${AWS_REGION}.amazonaws.com
