@@ -21,4 +21,4 @@ login:
 
 .PHONY: push
 push:
-	docker push 655123516369.dkr.ecr.${AWS_REGION}}.amazonaws.com/lambda-api-gateway:v1
+	docker push 655123516369.dkr.ecr.${AWS_REGION}.amazonaws.com/lambda-api-gateway:v1
