@@ -13,7 +13,7 @@ upload:
 .PHONY: docker
 docker:
 	docker build . -t chaspy/lambda-api-gateway:latest
-	docker tag chaspy/lambda-api-gateway:latest 655123516369.dkr.ecr.${AWS_REGION}.amazonaws.com/lambda-api-gateway:latest
+	docker tag chaspy/lambda-api-gateway:latest 655123516369.dkr.ecr.${AWS_REGION}.amazonaws.com/lambda-api-gateway:v1
 
 .PHONY: login
 login:
@@ -21,4 +21,4 @@ login:
 
 .PHONY: push
 push:
-	docker push 655123516369.dkr.ecr.${AWS_REGION}}.amazonaws.com/lambda-api-gateway:latest
+	docker push 655123516369.dkr.ecr.${AWS_REGION}}.amazonaws.com/lambda-api-gateway:v1

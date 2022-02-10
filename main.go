@@ -5,7 +5,7 @@ import (
 )
 
 func hello() (string, error) {
-	return "Hello canary! update-2022-01-16 10:56", nil
+	return "Hello PipeCD v1", nil
 }
 
 func main() {
